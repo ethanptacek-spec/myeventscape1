@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyEventScape.com — Dual Layer Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="glow-grid" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#top">MyEventScape</a>
+      <nav>
+        <a href="#layers">Layers</a>
+        <a href="#goals">Goals</a>
+        <a href="#modules">Modules</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <a class="btn btn--ghost" href="#personas">Meet the users</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">City-Scale Event OS</p>
+          <h1>The municipal event hub with two distinct layers.</h1>
+          <p class="lede">
+            A storytelling-forward marketing layer convinces planners to try the platform. A
+            premium subscription dashboard layer brings AI guidance, Google Maps design tools, and
+            shared inboxes into one secure workspace.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#layers">See the layers</a>
+            <a class="btn btn--ghost" href="#modules">Explore the stack</a>
+          </div>
+          <ul class="hero__stats">
+            <li>
+              <span>40% faster</span>
+              <p>Time from permit draft to submission</p>
+            </li>
+            <li>
+              <span>90% pass</span>
+              <p>Permits clear AI checks with no critical issues</p>
+            </li>
+            <li>
+              <span>6%+</span>
+              <p>Marketing conversion goal for free trials</p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__panel">
+          <div class="panel-card">
+            <h2>Executive snapshot</h2>
+            <p>
+              MyEventScape.com unifies customers, vendors, public safety, and city officials so every
+              parade, street fair, and race is organized with confidence. The platform layers a
+              high-converting marketing story over a secure paywalled dashboard that hosts permits,
+              maps, inbox threads, and an AI co-pilot.
+            </p>
+            <ul>
+              <li>Supabase backend & auth</li>
+              <li>Stripe paywall + role gating</li>
+              <li>Google Maps Studio with vendor metadata</li>
+              <li>AI guidance referencing city rule packs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="layers" id="layers">
+        <div class="section__header">
+          <p class="eyebrow">Layered home experience</p>
+          <h2>"Now" showcases the promise. "Next" gives paying planners superpowers.</h2>
+          <p>
+            The home experience is intentionally split: the public layer (Now) nurtures prospects and
+            routes them to authentication, while the private layer (Next) delivers the AI-powered
+            dashboard tailored to each role.
+          </p>
+        </div>
+        <div class="layer-switch">
+          <button class="layer-switch__btn is-active" data-layer-target="now">
+            Now · Marketing narrative
+          </button>
+          <button class="layer-switch__btn" data-layer-target="next">
+            Next · Authenticated dashboard
+          </button>
+        </div>
+        <div class="layer-panels">
+          <article class="layer-panel is-active" id="layer-now">
+            <div>
+              <h3>Public marketing surface</h3>
+              <p>
+                Hero storytelling, proof points, pricing tiers, testimonials, and FAQ previews educate
+                prospective planners before they create an account. Prominent CTAs route to the
+                Supabase Auth-backed paywall, blending trust and urgency.
+              </p>
+            </div>
+            <ul>
+              <li>Feature highlight cards tied to permit speed, AI compliance, and live collaboration.</li>
+              <li>Knowledge base teasers, footer with privacy/terms, and inbound trial signup flow.</li>
+              <li>Conversion goal: 6% trial start rate across campaigns.</li>
+            </ul>
+            <div class="layer-panel__callout">
+              <p>
+                This layer speaks to the <strong>Prospective Planner Visitor</strong> persona. Once
+                subscribed, visitors land inside the secure dashboard layer below.
+              </p>
+            </div>
+          </article>
+          <article class="layer-panel" id="layer-next">
+            <div>
+              <h3>Paywalled dashboard</h3>
+              <p>
+                After subscription, users access modules like Permit Center, Event Manager, Map Studio,
+                Vendor Portal, Inbox, and AI Guidance. Role-based access keeps planners, vendors,
+                public safety, and city reviewers focused on the right data.
+              </p>
+            </div>
+            <ul>
+              <li>Guided permit builder with AI pre-checks and attachment uploads.</li>
+              <li>Google Maps drawing tools with layers for vendors, utilities, emergency zones.</li>
+              <li>Messaging inbox with tagging, attachments, and notifications.</li>
+              <li>Vendor onboarding portal with booth assignments and chat.</li>
+            </ul>
+            <div class="layer-panel__callout">
+              <p>
+                Stripe (or similar) enforces subscription status before Supabase delivers session tokens
+                and role permissions for <strong>Planner Admin</strong>, <strong>Vendor</strong>,
+                <strong>Public Safety</strong>, and <strong>City Reviewer</strong> roles.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="pillars" id="goals">
+        <div class="section__header">
+          <p class="eyebrow">Product goals</p>
+          <h2>Four pillars define success.</h2>
+        </div>
+        <div class="grid grid--four">
+          <article class="card">
+            <h3>Centralize workflows</h3>
+            <p>Replace spreadsheets, PDFs, and scattered email threads with one planner OS.</p>
+          </article>
+          <article class="card">
+            <h3>Accelerate approvals</h3>
+            <p>AI validation eliminates missing barricade plans or insurance docs before submission.</p>
+          </article>
+          <article class="card">
+            <h3>Real-time awareness</h3>
+            <p>Live maps, shared inboxes, and notifications keep vendors and public safety synchronized.</p>
+          </article>
+          <article class="card">
+            <h3>Premium experience</h3>
+            <p>Paywalled dashboard delivers the polish needed to command subscription revenue.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="personas" id="personas">
+        <div class="section__header">
+          <p class="eyebrow">Target users</p>
+          <h2>Five personas orbit the platform.</h2>
+        </div>
+        <div class="persona-grid">
+          <article>
+            <h3>City Event Planner</h3>
+            <p>Primary. Coordinates parades, races, and fairs.</p>
+            <ul>
+              <li>Needs intake wizards, permit tracking, city collaboration.</li>
+              <li>Requires AI guardrails for compliance.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Vendor Manager</h3>
+            <p>Handles booth placement and onboarding.</p>
+            <ul>
+              <li>Uses Map Studio for assignments.</li>
+              <li>Communicates changes instantly.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Public Safety Official</h3>
+            <p>Police, fire, EMS reviewing safety plans.</p>
+            <ul>
+              <li>Highlights safety requirements.</li>
+              <li>Responds within inbox threads.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>City Permit Officer</h3>
+            <p>Municipal reviewer receiving packages.</p>
+            <ul>
+              <li>Needs complete, compliant submissions.</li>
+              <li>Replies without leaving the platform.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Prospective Planner Visitor</h3>
+            <p>Exploring the marketing site pre-subscription.</p>
+            <ul>
+              <li>Seeks value, pricing, features.</li>
+              <li>Needs trust signals to convert.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="journeys" id="journeys">
+        <div class="section__header">
+          <p class="eyebrow">Experience map</p>
+          <h2>User journeys across both layers.</h2>
+        </div>
+        <ol>
+          <li>
+            <h3>Discover &amp; Subscribe</h3>
+            <p>Marketing site funnels visitors to trials, payments, and authentication.</p>
+          </li>
+          <li>
+            <h3>Create event &amp; permit package</h3>
+            <p>Planner completes AI-assisted wizard before city review.</p>
+          </li>
+          <li>
+            <h3>Design vendor map</h3>
+            <p>Google Maps drawing tools shape footprints, pins, and asset layers.</p>
+          </li>
+          <li>
+            <h3>Collaborate via Inbox</h3>
+            <p>Role-aware messaging connects planners, vendors, and officials.</p>
+          </li>
+          <li>
+            <h3>Vendor onboarding</h3>
+            <p>Vendors view assignments, upload docs, and chat in a lightweight portal.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="modules" id="modules">
+        <div class="section__header">
+          <p class="eyebrow">Functional requirements</p>
+          <h2>Full stack of dashboard modules.</h2>
+        </div>
+        <div class="module-wrap">
+          <article>
+            <h3>Permit Center</h3>
+            <p>Guided forms for parade/block-party permits, attachments, timeline tracker, AI compliance.</p>
+          </article>
+          <article>
+            <h3>Event Manager</h3>
+            <p>List, calendar, and timeline views with tasks, reminders, dependencies, exportable packets.</p>
+          </article>
+          <article>
+            <h3>Map Studio</h3>
+            <p>Google Maps API drawing, layers, vendor metadata (power, arrival), shareable versions.</p>
+          </article>
+          <article>
+            <h3>Vendor Portal</h3>
+            <p>Vendors authenticate, accept/decline, download passes, update inventory, and chat.</p>
+          </article>
+          <article>
+            <h3>Inbox &amp; Notifications</h3>
+            <p>Threads with tagging, attachments, AI responses, and alerts for permits or map updates.</p>
+          </article>
+          <article>
+            <h3>AI Guidance</h3>
+            <p>Rule engine seeded with city guidelines, checklist suggestions, draft responses, learning loop.</p>
+          </article>
+          <article>
+            <h3>Admin &amp; Settings</h3>
+            <p>Org management, billing, API keys, audit logs, SOC2-ready security controls.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="data" id="data">
+        <div class="section__header">
+          <p class="eyebrow">Data backbone</p>
+          <h2>Supabase models keep every stakeholder in sync.</h2>
+        </div>
+        <div class="data-grid">
+          <article>
+            <h3>Core tables</h3>
+            <ul>
+              <li>organizations (tier, settings)</li>
+              <li>users (profile, role, organization_id)</li>
+              <li>events (metadata, schedule, status)</li>
+              <li>permits (type, form_payload, status, reviewer_notes)</li>
+              <li>maps (event_id, geojson, version metadata)</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Collaboration tables</h3>
+            <ul>
+              <li>vendor_assignments (booth details)</li>
+              <li>messages (threads, recipients, attachments)</li>
+              <li>notifications (payload, read state)</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Intelligence tables</h3>
+            <ul>
+              <li>ai_guidelines (city rules, last updated)</li>
+              <li>audit logs for compliance</li>
+              <li>Edge functions call OpenAI for scoring &amp; suggestions</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="metrics" id="metrics">
+        <div class="section__header">
+          <p class="eyebrow">Success metrics</p>
+          <h2>Measure adoption across both layers.</h2>
+        </div>
+        <div class="metrics-grid">
+          <article>
+            <p class="metric">40%</p>
+            <p>Time saved drafting permits vs. manual process.</p>
+          </article>
+          <article>
+            <p class="metric">90%</p>
+            <p>Permits pass AI pre-checks without critical issues.</p>
+          </article>
+          <article>
+            <p class="metric">4.5/5</p>
+            <p>Vendor CSAT inside the portal.</p>
+          </article>
+          <article>
+            <p class="metric">85%+</p>
+            <p>Monthly active org retention.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="roadmap" id="roadmap">
+        <div class="section__header">
+          <p class="eyebrow">Roadmap</p>
+          <h2>Phased delivery with AI acceleration.</h2>
+        </div>
+        <div class="roadmap__grid">
+          <article class="phase-card active" data-detail="MVP delivers the marketing site, authentication/paywall, basic dashboard modules (Permit Center, Maps, Messaging), and the Supabase backend foundation.">
+            <p class="phase">Phase 1</p>
+            <h3>MVP · Months 0–3</h3>
+            <p>Marketing site, auth/paywall, permit forms, Google Maps drawing, messaging, Supabase backend.</p>
+          </article>
+          <article class="phase-card" data-detail="Phase 2 unlocks the vendor portal, AI rule engine, map versioning, subscription billing, and notifications so the dashboard becomes collaborative.">
+            <p class="phase">Phase 2</p>
+            <h3>Months 3–6</h3>
+            <p>Vendor portal, AI rule engine, map versioning, Stripe billing, notifications.</p>
+          </article>
+          <article class="phase-card" data-detail="Phase 3 focuses on automation—AI drafted responses, analytics, DocuSign/Twilio integrations, and mobile wrappers for field teams.">
+            <p class="phase">Phase 3</p>
+            <h3>Months 6–9</h3>
+            <p>Advanced automation, analytics, DocuSign/Twilio, mobile wrappers.</p>
+          </article>
+          <article class="phase-card" data-detail="Phase 4 introduces the marketplace, public event directory, and white-label portals so cities can extend the platform outward.">
+            <p class="phase">Phase 4</p>
+            <h3>Months 9–12</h3>
+            <p>Marketplace for vendors, public event directory, white-label city portals.</p>
+          </article>
+        </div>
+        <div class="roadmap__detail" data-phase-detail>
+          MVP delivers the marketing site, authentication/paywall, basic dashboard modules (Permit Center,
+          Maps, Messaging), and the Supabase backend foundation.
+        </div>
+      </section>
+
+      <section class="risks">
+        <div class="section__header">
+          <p class="eyebrow">Open questions &amp; risks</p>
+          <h2>Areas to monitor as layers evolve.</h2>
+        </div>
+        <div class="risks-grid">
+          <article>
+            <h3>City-specific onboarding</h3>
+            <p>Need admin tooling to seed municipal rules quickly.</p>
+          </article>
+          <article>
+            <h3>Submission requirements</h3>
+            <p>Some cities may still require PDF exports; fallback workflows needed.</p>
+          </article>
+          <article>
+            <h3>Data sensitivity</h3>
+            <p>Safety plans may require extra encryption &amp; key management.</p>
+          </article>
+          <article>
+            <h3>Google Maps cost</h3>
+            <p>High draw usage could drive API costs—need monitoring &amp; caching.</p>
+          </article>
+          <article>
+            <h3>Pricing strategy</h3>
+            <p>Balance SMB planners vs. enterprise cities to hit revenue goals.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© MyEventScape.com — Built with Supabase, Stripe, Google Maps, and AI copilots.</p>
+    </footer>
+  </body>
+</html>
