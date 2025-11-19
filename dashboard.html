@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyEventScape Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">ME</span>
+        <div>
+          <p class="brand-title">MyEventScape</p>
+          <p class="brand-subtitle">City of Cascadia</p>
+        </div>
+      </div>
+      <nav>
+        <p class="nav-label">Operations</p>
+        <ul>
+          <li class="active"><span>Permit Center</span></li>
+          <li><span>Event Manager</span></li>
+          <li><span>Map Studio</span></li>
+          <li><span>Vendor Portal</span></li>
+        </ul>
+        <p class="nav-label">Collaboration</p>
+        <ul>
+          <li><span>Inbox</span></li>
+          <li><span>Notifications</span></li>
+          <li><span>AI Guidance</span></li>
+        </ul>
+        <p class="nav-label">Admin</p>
+        <ul>
+          <li><span>Settings</span></li>
+          <li><span>Billing</span></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <p class="footer-title">Next milestone</p>
+        <p class="footer-body">Submit Cascadia Marathon packet by Apr 14</p>
+        <button>Open Event</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-header">
+        <div>
+          <p class="crumbs">Dashboard / Permit Center</p>
+          <h1>Permit Center</h1>
+        </div>
+        <div class="header-actions">
+          <div class="status-pill">AI Pre-check: 92% compliant</div>
+          <button class="primary">Request City Review</button>
+        </div>
+      </header>
+
+      <section class="permit-grid">
+        <article class="card permit">
+          <header>
+            <div>
+              <p class="eyebrow">Permit Package</p>
+              <h2>Cascadia Marathon 2024</h2>
+            </div>
+            <span class="badge success">In progress</span>
+          </header>
+          <div class="permit-body">
+            <div>
+              <p class="label">City reviewer</p>
+              <p class="value">Lt. Harper · Public Safety</p>
+            </div>
+            <div>
+              <p class="label">Next action</p>
+              <p class="value">Upload barricade plan</p>
+            </div>
+            <div>
+              <p class="label">Due date</p>
+              <p class="value">Apr 18, 2024</p>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+          <p class="progress-label">Checklist completion 14/20</p>
+        </article>
+
+        <article class="card timeline">
+          <header>
+            <p class="eyebrow">Status timeline</p>
+            <div class="timeline-legend">
+              <span class="dot success"></span> Submitted
+              <span class="dot info"></span> City feedback
+              <span class="dot warning"></span> Pending
+            </div>
+          </header>
+          <ul>
+            <li>
+              <div>
+                <p class="label">Mar 21 · Intake wizard complete</p>
+                <p class="value">AI found 2 non-critical notes</p>
+              </div>
+              <span class="badge success">Complete</span>
+            </li>
+            <li>
+              <div>
+                <p class="label">Mar 26 · Safety packet uploaded</p>
+                <p class="value">Awaiting city acknowledgement</p>
+              </div>
+              <span class="badge info">Submitted</span>
+            </li>
+            <li>
+              <div>
+                <p class="label">Apr 04 · Street closure request</p>
+                <p class="value">Missing barricade details</p>
+              </div>
+              <span class="badge warning">Action needed</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card ai">
+          <header>
+            <p class="eyebrow">AI Guidance</p>
+            <button class="ghost">Open rules</button>
+          </header>
+          <div class="ai-suggestion">
+            <p class="label">High priority</p>
+            <p class="value">
+              Add EMT staging area within 500 ft of finish line per Cascadia ordinance 8.4b.
+            </p>
+            <button class="link">Create task</button>
+          </div>
+          <div class="ai-suggestion">
+            <p class="label">Medium priority</p>
+            <p class="value">Upload revised insurance certificate (expires before event date).</p>
+            <button class="link">Upload now</button>
+          </div>
+          <div class="ai-chat">
+            <p class="eyebrow">Ask the co-pilot</p>
+            <div class="chat-bubble">
+              "Draft a response explaining our barricade vendor will deliver on Apr 16."
+            </div>
+            <button class="primary ghost">Insert into reply</button>
+          </div>
+        </article>
+
+        <article class="card map">
+          <header>
+            <p class="eyebrow">Map Studio snapshot</p>
+            <button class="ghost">Open map</button>
+          </header>
+          <div class="map-preview">
+            <div class="map-grid">
+              <span class="pin vendor">V</span>
+              <span class="pin safety">EMS</span>
+              <span class="pin utility">PWR</span>
+            </div>
+            <div class="map-legend">
+              <p><span class="dot vendor"></span> Vendors · 62 assigned</p>
+              <p><span class="dot safety"></span> Safety pods · 4</p>
+              <p><span class="dot utility"></span> Utilities · 9</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card vendor">
+          <header>
+            <p class="eyebrow">Vendor onboarding</p>
+            <button class="ghost">Share portal</button>
+          </header>
+          <div class="vendor-stats">
+            <div>
+              <p class="value">58</p>
+              <p class="label">Accepted</p>
+            </div>
+            <div>
+              <p class="value">7</p>
+              <p class="label">Pending docs</p>
+            </div>
+            <div>
+              <p class="value">3</p>
+              <p class="label">Declined</p>
+            </div>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <div>
+                <p class="label">Booth B14 · Cascadia Coffee</p>
+                <p class="value">Needs power confirmation</p>
+              </div>
+              <button class="link">Open thread</button>
+            </li>
+            <li>
+              <div>
+                <p class="label">Booth T04 · Trail Snacks</p>
+                <p class="value">Inventory uploaded</p>
+              </div>
+              <span class="badge success">Ready</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card inbox">
+          <header>
+            <p class="eyebrow">Inbox</p>
+            <button class="ghost">View all</button>
+          </header>
+          <ul>
+            <li>
+              <div>
+                <p class="label">City Safety · Lt. Harper</p>
+                <p class="value">Need to confirm number of barricades on 5th Ave.</p>
+              </div>
+              <span class="badge warning">City</span>
+            </li>
+            <li>
+              <div>
+                <p class="label">Vendor · Cascade Brewing</p>
+                <p class="value">Uploaded insurance docs. Please review.</p>
+              </div>
+              <span class="badge info">Vendor</span>
+            </li>
+            <li>
+              <div>
+                <p class="label">Public Safety Broadcast</p>
+                <p class="value">Heat advisory expected during event weekend.</p>
+              </div>
+              <span class="badge neutral">System</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
